@@ -1,0 +1,8 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:500,900");
+h1, h2, h3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bolder; }
+
+body {
+  font-family: 'Opesn Sans', sans-serif;
+  background-color: lightblue; }
