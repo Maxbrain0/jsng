@@ -1,0 +1,8 @@
+<div class="j-nav">
+        <!-- Loop through the navigation items -->
+        <div class="j-nav-logo"><img src="{{@blog.logo}}" alt="blog logo"></div>
+        {{#foreach navigation}}
+          <div class="j-nav-item {{#if current}} nav-current{{/if}}"><a href="{{url absolute="true"}}">{{label}}</a></div>
+        {{/foreach}}
+        <!-- End the loop -->
+</div>
