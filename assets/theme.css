@@ -1,36 +1,36 @@
-.j-nav {
-  display: grid;
-  color: white;
-  grid-template-columns: repeat(7, 1fr);
-  width: 100%;
+.j-nav-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
   align-items: center;
-  background-color: #1c1c1c; }
+  background-color: #0e2e4e; }
 
 .j-nav-logo img {
-  max-height: 50px;
-  max-width: 500px; }
+  margin-left: 20px;
+  height: 50px; }
 
-.j-nav-item {
-  font-family: Roboto, sans-serif;
-  font-size: 1.25rem;
-  color: white;
-  font-weight: bolder; }
-  .j-nav-item a:link {
-    text-decoration: none;
-    color: white; }
-  .j-nav-item a:visited {
-    text-decoration: none;
-    color: white; }
-  .j-nav-item a:hover {
-    color: #e84b0d;
-    transition: 500ms; }
-  .j-nav-item a:active {
-    text-decoration: underline; }
+.j-nav-item a {
+  margin-left: 10px;
+  color: #f6f6f6;
+  font-size: 18px;
+  text-decoration: none; }
+
+.j-nav-item a:hover {
+  color: #c3c3c3;
+  transition: 250ms; }
+
+@media all and (max-width: 875px) {
+  .j-nav-container {
+    flex-flow: column nowrap;
+    justify-content: center; } }
 
 h1, h2, h3 {
   font-family: 'Roboto', sans-serif;
   font-weight: bolder;
-  color: #e84b0d; }
+  color: #1c1c1c; }
+
+a {
+  font-family: 'Roboto', sans-serif; }
 
 body {
   font-family: 'Opesn Sans', sans-serif;

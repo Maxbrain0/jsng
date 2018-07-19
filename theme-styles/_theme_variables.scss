@@ -1,5 +1,10 @@
-$color1: rgba(28, 28, 28, 1);
-$color2: rgba(7, 30, 51, 1);
-$color3: rgba(232, 75, 13, 1);
-$color4: rgba(50, 191, 193, 1);
-$color5: rgba(246, 246, 246, 1);
+$dark: rgb(28, 28, 28);
+$blue: rgb(14, 45, 77);
+$orange: rgb(232, 75, 13);
+$white: rgb(246, 246, 246);
+
+$hover: 500ms;
+$menu-transition: 200ms;
+
+$breakpoint: 600px;
+$max-column-width: 1024px;

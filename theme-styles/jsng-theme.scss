@@ -1,18 +1,13 @@
-//imports
-@import 'theme_variables';
-@import 'navigation';
-//fonts
-//@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto:500,900');
-
-
-
-h1,h2,h3 {
-  font-family: 'Roboto', sans-serif;
-  font-weight: bolder;
-  color: $color3;
-}
+@import '_theme_variables';
+@import '_header';
+@import '_posts_list';
 
 body {
-  font-family: 'Opesn Sans', sans-serif;
-  margin: 0px;
+  max-width: $max-column-width;
+  margin: auto;
+}
+
+h1,h2,h3,h4,h5 {
+  font-family: Roboto, sans-serif;
+  font-weight: 600;
 }
