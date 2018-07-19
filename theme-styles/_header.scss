@@ -1,0 +1,107 @@
+#j-logo-header {
+  margin-top: 30px;
+  font-family: Roboto, sans-serif;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  height: 35px;
+  a {
+    height: inherit;
+  }
+  img {
+    padding-left: 20px;
+    height: inherit;
+    
+  }
+}
+
+#j-menu-toggle {
+  text-decoration: none;
+  align-self: flex-end;
+  padding-right: 20px;
+  font-weight: 300;
+  font-size: 20px;
+  color: $orange;
+
+  .j-menu-button {
+    border-bottom: 3px solid $orange;
+  }
+
+  &:hover {
+    #j-toggle-arrow {
+      color: $blue;
+      transition: $hover;
+    }
+    
+    .j-menu-button {
+      border-color: $blue;
+      transition: $hover;
+    }
+  }
+}
+
+#j-toggle-arrow {
+  transition: transform $menu-transition linear;
+}
+
+#j-navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  overflow: hidden;
+  height: 0px; //initial height will be modified by js
+  font-family: Roboto, sans-serif;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  align-content: space-between;
+  transition: height $menu-transition linear;
+ 
+    a {
+      margin-left: 7px;
+      margin-right: 7px;
+      text-decoration: none;
+      text-align: center;
+      border-bottom: 3px solid $blue;
+      font-weight: 600;
+      font-size: 14px;
+      color: $blue;
+    
+      &:hover {
+        border-color: $orange;
+        transition: $hover
+      }
+    
+    }
+  
+}
+
+
+.j-cover-image {
+  position: relative;
+  text-align: center;
+  color: $white;
+  
+  img {
+    max-width: 100%;
+    filter: brightness(85%) opacity(95%);
+  }
+  .j-image-text {
+    font-family: Lato, sans-serif;
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+
+    h1 {
+      margin-bottom: 5px;
+      font-size: 40px;
+      text-shadow: 3px 3px $dark;
+    }
+    h2 {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      font-size: 16px;
+      text-shadow: 3px 3px $dark;
+    }
+  }
+}

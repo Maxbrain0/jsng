@@ -1,8 +1,14 @@
-<nav class="j-nav-container">
-  <div class="j-nav-logo"><img src="{{@blog.logo}}" alt="blog logo"></div>
-  <!-- Loop through the navigation items -->
+<div id="j-logo-header">
+  <a href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo"></a>
+  <a id="j-menu-toggle" href="#">
+    <span><i id="j-toggle-arrow" class="fas fa-angle-down"></i></span>
+    <span class='j-menu-button'>Menu</span>
+  </a>
+</div>
+
+<nav>
   {{#foreach navigation}}
-    <div class="j-nav-item {{#if current}}nav-current{{/if}}"><a href="{{url absolute="true"}}">{{label}}</a></div>
+    <a href="{{url absolute="true"}}">{{ label }}</a>
+    {{!-- <div class="j-nav-item {{#if current}}nav-current{{/if}}"><a href="{{url absolute="true"}}">{{label}}</a></div> --}}
   {{/foreach}}
-  <!-- End the loop -->
 </nav>
