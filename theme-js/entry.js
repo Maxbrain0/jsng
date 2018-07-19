@@ -5,9 +5,7 @@ import '../theme-styles/jsng-theme.scss'
 import './navToggles'
 
 //import font-awesomestyles
-import fontawesome from '@fortawesome/fontawesome'
-import fas from '@fortawesome/fontawesome-free-solid'
+
 // import faFacebook from '@fortawesome/fontawesome-free-brands/faFacebook'
 // import faLinkedinIn from '@fortawesome/fontawesome-free-brands/faLinkedinIn'
 
-fontawesome.library.add(fas)
