@@ -1,82 +1,42 @@
 #j-logo-header {
   display: flex;
+  justify-content: space-between;
   margin-top: 1em;
-  display: flex;
-  font-family: Roboto, sans-serif;
+  margin-bottom: 1em;
+  font-family: sans-serif;
   font-weight: 600;
   height: 35px;
   
-  a {
+  .j-logo {
+    margin-left: 1em;
     height: inherit;
-    justify-self: space-around;
-    margin: auto;
+    align-self: flex-end;  
   }
+  
   img {
     max-height: 100%;
-  } 
+  }
+  
+  .j-menu-toggle {
+    align-self: flex-end;
+    margin-right: 1em;
+    color: $orange;
+    font-size: 1.25em;
+    cursor: pointer;
+
+    &:hover {
+      color: $blue;
+      transition: 500ms;
+    }
+  }
 }
 
 #j-navbar {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  font-family: Roboto, sans-serif;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  align-content: space-around;
-  transition: height $menu-transition ease-in;
-  
-  @media screen and (max-width: $breakpoint) {
-    flex-direction: row;
-  }
-
-    a {
-      min-width: 75px;
-      margin: 0.25em 0.5em 0.25em 0.5em;
-      text-decoration: none;
-      border-bottom: 2px solid $blue;
-      font-weight: 600;
-      font-size: 1em;
-      color: $blue;
-      text-align: center;
-
-      &:hover {
-        border-color: $orange;
-        transition: $hover
-      }
-    }
+  font-size: 1.5em;
 }
 
 .j-navbar-current {
   border-color: $orange;
 }
 
-.j-cover-image {
-  position: relative;
-  text-align: center;
-  color: $white;
-  
-  img {
-    max-width: 100%;
-    filter: brightness(85%) opacity(95%);
-  }
-  .j-image-text {
-    font-family: Lato, sans-serif;
-    position: absolute;
-    bottom: 10%;
-    left: 50%;
-    transform: translate(-50%, 0%);
 
-    h1 {
-      margin-bottom: 5px;
-      font-size: 1.5em;
-      text-shadow: 2px 2px $dark;
-    }
-    h2 {
-      margin-top: 0px;
-      margin-bottom: 0px;
-      font-size: 1em;
-      text-shadow: 2px 2px $dark;
-    }
-  }
-}

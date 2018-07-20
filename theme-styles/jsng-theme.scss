@@ -1,6 +1,8 @@
 @import '_theme_variables';
 @import '_header';
-// @import '_posts_list';
+@import '_index';
+
+
 
 body {
   font-size: 1em;
@@ -9,6 +11,6 @@ body {
 }
 
 h1,h2,h3,h4,h5 {
-  font-family: Roboto, sans-serif;
+  font-family: sans-serif;
   font-weight: 600;
 }
