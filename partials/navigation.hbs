@@ -1,14 +1,9 @@
 <div id="j-logo-header">
-  <a href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo"></a>
-  <a id="j-menu-toggle" href="#">
-    <span><i id="j-toggle-arrow" class="fas fa-angle-down"></i></span>
-    <span class='j-menu-button'>Menu</span>
-  </a>
+    <a href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo"></a> 
 </div>
 
-<nav id="j-navbar">
+{{!-- <nav id="j-navbar">
   {{#foreach navigation}}
-    <a href="{{url absolute="true"}}">{{ label }}</a>
-    {{!-- <div class="j-nav-item {{#if current}}nav-current{{/if}}"><a href="{{url absolute="true"}}">{{label}}</a></div> --}}
+    <a class="{{#if current}}j-navbar-current{{/if}}" href="{{url absolute="true"}}">{{ label }}</a>
   {{/foreach}}
-</nav>
+</nav> --}}
