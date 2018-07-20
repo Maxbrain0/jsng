@@ -1,11 +1,15 @@
 // import the parent theme style
-import '../theme-styles/jsng-theme.scss'
+import '../theme-styles/jsng-theme.scss';
 
 // for toggling navigation
-import './navToggles'
+import './navToggles';
 
 //import font-awesomestyles
+import { library, dom } from '@fortawesome/fontawesome-svg-core';
+import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 
-// import faFacebook from '@fortawesome/fontawesome-free-brands/faFacebook'
-// import faLinkedinIn from '@fortawesome/fontawesome-free-brands/faLinkedinIn'
+
+// Add all icons to the library so you can use it in your page
+library.add(faAngleDown);
+dom.watch();
 
