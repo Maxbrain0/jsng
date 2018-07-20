@@ -47,16 +47,17 @@ function expandSection(element) {
 }
 
 
-// list to menu-toggle click. Then expand or contract navbar
-
 // grab the section to be initialized, then initialize to data-expanded=false
 var section = document.querySelector('#j-navbar');
 section.setAttribute('data-expanded', false);
 
-//grab the array next to menu to give it a nice lil' flip-a-roo
-var toggleArrow = document.querySelector('#j-toggle-arrow');
 
 document.querySelector('#j-menu-toggle').addEventListener('click', function(e) {
+  //grab the array next to menu to give it a nice lil' flip-a-roo
+
+  // make sure to get toggle arrow after font-aweseome has converted it to svg
+  var toggleArrow = document.querySelector('#j-toggle-arrow');
+  // console.log(toggleArrow);
   var isExpanded = section.getAttribute('data-expanded') === 'true';
   if(!isExpanded) {
     expandSection(section)
