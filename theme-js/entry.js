@@ -1,9 +1,6 @@
 // import the parent theme style
 import '../theme-styles/jsng-theme.scss';
 
-// for toggling navigation
-import './navToggles';
-
 //import font-awesomestyles
 import { library, dom } from '@fortawesome/fontawesome-svg-core';
 import { faChevronCircleDown } from '@fortawesome/free-solid-svg-icons';
@@ -13,3 +10,5 @@ import { faChevronCircleDown } from '@fortawesome/free-solid-svg-icons';
 library.add(faChevronCircleDown);
 dom.watch();
 
+// for toggling navigation
+import './navToggles';

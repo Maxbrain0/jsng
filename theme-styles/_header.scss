@@ -23,22 +23,40 @@
     font-weight: 700;
     border-bottom: 3px $orange solid;
     cursor: pointer;
-    transition: $menu-transition;
+    transition: all $menu-transition;
 
-    .fa-chevron-circle-down {
-      color: $orange;
-      transition: $menu-transition;
-    }
     &:hover {
       color: $orange;
       border-bottom-color: $blue;
       transition: $menu-transition;
-
-      .fa-chevron-circle-down {
-        color: $blue;
-        transition: $menu-transition;
-      }
     }
+  }
+
+  .fa-chevron-circle-down {
+    color: $orange;
+  }
+
+  .fa-chevron-circle-down.menu-closed {
+    animation: fliparrow $menu-transition linear reverse;
+    transform: rotate(0deg);
+  }
+
+  .fa-chevron-circle-down.menu-opened {
+    animation: fliparrow $menu-transition linear;
+    transform: rotate(180deg);
+  } 
+}
+
+@keyframes fliparrow {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(90deg);
+  }
+
+  100% {
+    transform: rotate(180deg);
   }
 }
 
