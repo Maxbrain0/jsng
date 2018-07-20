@@ -6,11 +6,13 @@
 
 body {
   font-size: 1em;
+  font-weight: 300;
+  font-family: Helvetica, Arial, sans-serif;
   max-width: $max-column-width;
   margin: auto;
 }
 
 h1,h2,h3,h4,h5 {
-  font-family: sans-serif;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
   font-weight: 600;
 }

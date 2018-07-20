@@ -3,8 +3,6 @@
   justify-content: space-between;
   margin-top: 1em;
   margin-bottom: 1em;
-  font-family: sans-serif;
-  font-weight: 600;
   height: 35px;
   
   .j-logo {
@@ -20,13 +18,26 @@
   .j-menu-toggle {
     align-self: flex-end;
     margin-right: 1em;
-    color: $orange;
-    font-size: 1.25em;
+    color: $blue;
+    font-size: 1.5em;
+    font-weight: 700;
+    border-bottom: 3px $orange solid;
     cursor: pointer;
+    transition: $menu-transition;
 
+    .fa-chevron-circle-down {
+      color: $orange;
+      transition: $menu-transition;
+    }
     &:hover {
-      color: $blue;
-      transition: 500ms;
+      color: $orange;
+      border-bottom-color: $blue;
+      transition: $menu-transition;
+
+      .fa-chevron-circle-down {
+        color: $blue;
+        transition: $menu-transition;
+      }
     }
   }
 }
