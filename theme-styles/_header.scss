@@ -80,7 +80,7 @@
   }
 
   .nav-links {
-    max-width: 400px;
+    max-width: $breakpoint;
     padding-top: 2em;
     padding-bottom: 2em;
     display: flex;
@@ -90,9 +90,9 @@
     flex-wrap: wrap;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 700;
-    font-size: 1.5em;
+    font-size: 2em;
     a {
-      min-width: 150px;
+      min-width: 200px;
       margin-left: 1em;
       margin-right: 1em;
       margin-bottom: 1em;
@@ -124,6 +124,20 @@
   .social-links {
     display: flex;
     justify-content: center;
+    max-width: 90%;
+    margin: auto;
+
+    .social-icon {
+      font-size: 2em;
+      color: $white;
+      margin-left: 1em;
+      margin-right: 1em;
+
+      &:hover {
+        color:$orange;
+        transition: $menu-transition;
+      }
+    }
   }
 }
 
