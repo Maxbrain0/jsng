@@ -42,6 +42,8 @@
   }
 
   .fa-chevron-circle-down.menu-opened {
+    color: $blue;
+    transition: $menu-transition;
     animation: fliparrow $menu-transition linear;
     transform: rotate(180deg);
   } 
@@ -54,18 +56,75 @@
   50% {
     transform: rotate(90deg);
   }
-
   100% {
     transform: rotate(180deg);
   }
 }
 
 #j-navbar {
-  font-size: 1.5em;
-}
+  position: fixed;
+  max-width: inherit;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba($blue, 0.90);
 
-.j-navbar-current {
-  border-color: $orange;
+  &.closed {
+    transition: opacity $menu-transition;
+    opacity: 0;
+  }
+  &.opened {
+    transition: opacity $menu-transition;
+    opacity: 1;
+    z-index:1;
+  }
+
+  .nav-links {
+    max-width: 400px;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+    font-size: 1.5em;
+    a {
+      min-width: 150px;
+      margin-left: 1em;
+      margin-right: 1em;
+      margin-bottom: 1em;
+      text-align: center;
+    }
+    a:link {
+      color: $white;
+      text-decoration: none;
+    }
+    a.j-navbar-current:link {
+      border-bottom: 2px $orange solid;
+      text-decoration: none;
+    }
+    a:visited {
+      color: $white;
+      text-decoration: none;
+    }
+    a.j-navbar-current:visited {
+      border-bottom: 2px $orange solid;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: lighten($orange, 10);
+      transition: $menu-transition;
+    }
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 

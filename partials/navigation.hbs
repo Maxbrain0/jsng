@@ -6,8 +6,14 @@
     </div>
 </div>
 
-{{!-- <nav id="j-navbar">
-  {{#foreach navigation}}
-    <a class="{{#if current}}j-navbar-current{{/if}}" href="{{url absolute="true"}}">{{ label }}</a>
-  {{/foreach}}
-</nav> --}}
+<nav id="j-navbar" class="closed">
+  <div class="nav-links">
+    {{#foreach navigation}}
+      <a class="{{#if current}}j-navbar-current{{/if}}" href="{{url absolute="true"}}">{{ label }}</a>
+    {{/foreach}}
+  </div>
+  <div class="social-links">
+    <span>Facebook</span>
+    <span>Twitter</span>
+  </div>
+</nav>
