@@ -28,8 +28,13 @@
   }
 }
 
-.j-posts-list {
+#j-posts-list {
   margin-top: 25px;
   display: grid;
+
+  .j-post {
+    display: grid;
+    
+  }
 }
 

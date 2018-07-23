@@ -1,0 +1,16 @@
+<div id="j-posts-list">
+  {{#foreach posts}}
+    <div class="j-post">
+      <div class="post-header">
+        {{title}}
+      </div>
+      <div class="post-exceprt">
+        <p>{{excerpt words="25"}}</p>
+      </div>
+      <div class="post-meta">
+        {{author}}
+        {{tags}}
+      </div>
+    </div>
+  {{/foreach}}
+</div>
