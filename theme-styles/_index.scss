@@ -39,41 +39,57 @@
 #j-posts-list {
   display: grid;
   row-gap: 5em;
-  padding: 0 2em 0 2em;
+  padding: 0 2em 0 2em; //makes a nice little distincting from header and image content
   margin: auto;
   margin-top: 4em;
   color: $dark; 
 
   a {
     text-decoration: none;
+
+    &:link {
+      text-decoration: none;
+    }
+    &:visited {
+      text-decoration: none;
+    }
   }
-  a:link {
-    text-decoration: none;
-  }
-  a:visited {
-    text-decoration: none;
-  }
+  
 
   .j-post {
     display: grid;
-    align-items: center;    
-    row-gap: 0.5em;
-    column-gap: 1em;
     width: inherit;
     
-    &:nth-child(odd) {
-      grid-template-areas:"header image"
-                          "excerpt image"
-                          "meta image"; 
-      grid-template-columns: 2fr 1fr;
+    @media screen and (min-width: $breakpoint) {
+      // larger screen grid
+      align-items: center; 
+      row-gap: 0.5em;
+      column-gap: 3em;
+      &:nth-child(odd) {
+        grid-template-areas:"header image"
+                            "excerpt image"
+                            "meta image"; 
+        grid-template-columns: 2fr 1fr;
+      }
+  
+      &:nth-child(even) {
+        grid-template-areas:  "image header"
+                            "image excerpt"
+                            "image meta";
+        grid-template-columns: 1fr 2fr;
+      }
     }
 
-    &:nth-child(even) {
-      grid-template-areas:  "image header"
-                          "image excerpt"
-                          "image meta";
-      grid-template-columns: 1fr 2fr;
+    @media screen and (max-width: $breakpoint) {
+      // smaller screen grid
+      row-gap: 1em;
+      grid-template-areas:"header"
+                          "image"
+                          "exceprt"
+                          "meta"; 
     }
+
+    
     
     .post-image {
       grid-area: image;
@@ -85,13 +101,18 @@
     .post-header {
       grid-area: header;
       font-size: 1.75em;
+      color: $blue;
       font-family: Verdana, Arial, Helvetica, sans-serif;
       font-weight: 600; 
 
       a {
-        cursor: pointer;
         color: $blue;
-        text-decoration: none;
+        transition: $menu-transition;
+
+        &:hover {
+          color: $orange;
+          transition: $menu-transition;
+        }
       }
     }
     .post-excerpt {
@@ -100,6 +121,16 @@
 
     .post-meta {
       grid-area: meta;
+
+      a {
+        color: $orange;
+        transition: $menu-transition;
+
+        &:hover {
+          color: $blue;
+          transition: $menu-transition;
+        }
+      }
     }
   }
 }
