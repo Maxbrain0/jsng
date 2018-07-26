@@ -29,7 +29,7 @@
   }
 }
 
-.j-postbreak {
+.j-postsbreak {
   width: 50%;
   margin: 1em auto 1em auto;
   height: 0.5em;
@@ -39,7 +39,7 @@
 #j-posts-list {
   display: grid;
   row-gap: 5em;
-  padding: 0 2em 0 2em; //makes a nice little distincting from header and image content
+  padding: 0 3em 0 3em; //makes a nice little distincting from header and image content
   margin: auto;
   margin-top: 4em;
   color: $dark; 
@@ -68,7 +68,7 @@
       &:nth-child(odd) {
         grid-template-areas:"header image"
                             "excerpt image"
-                            "meta image"; 
+                            "meta image";
         grid-template-columns: 2fr 1fr;
       }
   
@@ -86,10 +86,9 @@
       grid-template-areas:"header"
                           "image"
                           "exceprt"
-                          "meta"; 
+                          "meta";
     }
 
-    
     
     .post-image {
       grid-area: image;
@@ -100,7 +99,7 @@
 
     .post-header {
       grid-area: header;
-      font-size: 1.75em;
+      font-size: 1.5em;
       color: $blue;
       font-family: Verdana, Arial, Helvetica, sans-serif;
       font-weight: 600; 
@@ -132,6 +131,13 @@
         }
       }
     }
+  }
+
+  .j-postbreak {
+    width: 33%;
+    margin: auto;
+    height: 0.3em;
+    background-color: $dark;
   }
 }
 
