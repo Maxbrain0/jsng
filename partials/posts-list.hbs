@@ -1,14 +1,17 @@
 <div id="j-posts-list">
   {{#foreach posts}}
-    <div class="j-post">
+    <div class="j-post {{post_class}}">
       <div class="post-image">
-        <img src="{{img_url feature_image}}" alt="Feature Image">
+        {{#if feature_image}}
+          <a href="{{url absolute="true"}}"><img src="{{img_url feature_image}}" alt="Feature Image"></a>
+        {{/if}}
       </div>
-      <div class="post-header">
-        {{title}}
-      </div>
+     
+        <div class="post-header">
+           <a href="{{url absolute="true"}}">{{title}}</a>
+        </div>
       <div class="post-exceprt">
-        <p>{{excerpt words="25"}}</p>
+        <p>{{excerpt words="30"}}...</p>
       </div>
       <div class="post-meta">
         {{author}}

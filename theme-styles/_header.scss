@@ -71,6 +71,7 @@
 
   &.closed {
     transition: opacity $menu-transition;
+    z-index: 0;
     opacity: 0;
   }
   &.opened {
