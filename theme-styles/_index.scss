@@ -38,10 +38,13 @@
 
 #j-posts-list {
   display: grid;
-  row-gap: 5em;
+  row-gap: 2em;
+  @media screen and (max-width: $breakpoint) {
+    padding: 0 2em 0 2em; // narrower side padding for smaller screens
+  }
   padding: 0 3em 0 3em; //makes a nice little distincting from header and image content
   margin: auto;
-  margin-top: 4em;
+  margin-top: 2.5em;
   color: $dark; 
 
   a {
@@ -82,7 +85,7 @@
 
     @media screen and (max-width: $breakpoint) {
       // smaller screen grid
-      row-gap: 1em;
+      row-gap: 0em;
       grid-template-areas:"header"
                           "image"
                           "exceprt"
@@ -103,6 +106,7 @@
       color: $blue;
       font-family: Verdana, Arial, Helvetica, sans-serif;
       font-weight: 600; 
+      margin-bottom: 1em;
 
       a {
         color: $blue;
