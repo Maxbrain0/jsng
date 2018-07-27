@@ -1,5 +1,21 @@
 {{!< default}}
 
-<h1>
-  This is a dad-gum-post
-</h1>
+<!-- Everything inside the #post tags pulls data from the post -->
+{{#post}}
+              
+<article class="{{post_class}}">
+  <header class="post-header">
+    <h1 class="post-title">{{title}}</h1>
+    <section class="post-meta">
+      <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">
+        {{date format="DD MMMM YYYY"}}
+      </time> 
+      {{tags prefix=" in "}}
+    </section>  
+  </header>
+  <section class="post-content">
+    {{content}}
+  </section>     
+</article>
+
+{{/post}}   
