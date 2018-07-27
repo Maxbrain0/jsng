@@ -1,0 +1,11 @@
+#j-post-page {
+  max-width: 100%;
+  @media screen and (max-width: $breakpoint) {
+    padding: 0 2em 0 2em; // narrower side padding for smaller screens
+  }
+  padding: 0 3em 0 3em; //makes a nice little distincting from header and image content
+
+  img {
+    max-width: 100%;
+  }
+}
