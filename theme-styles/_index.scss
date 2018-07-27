@@ -9,7 +9,6 @@
   }
 
   .j-image-text {
-    font-family: Helvetica, Arial, sans-serif;
     position: absolute;
     bottom: 10%;
     left: 50%;
@@ -38,9 +37,10 @@
 
 #j-posts-list {
   display: grid;
-  row-gap: 2em;
+  row-gap: 4em;
   @media screen and (max-width: $breakpoint) {
     padding: 0 2em 0 2em; // narrower side padding for smaller screens
+    row-gap: 2em;
   }
   padding: 0 3em 0 3em; //makes a nice little distincting from header and image content
   margin: auto;
@@ -85,7 +85,7 @@
 
     @media screen and (max-width: $breakpoint) {
       // smaller screen grid
-      row-gap: 0em;
+      row-gap: 0.5em;
       grid-template-areas:"header"
                           "image"
                           "exceprt"
@@ -104,9 +104,7 @@
       grid-area: header;
       font-size: 1.5em;
       color: $blue;
-      font-family: Verdana, Arial, Helvetica, sans-serif;
       font-weight: 600; 
-      margin-bottom: 1em;
 
       a {
         color: $blue;
@@ -124,12 +122,42 @@
 
     .post-meta {
       grid-area: meta;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+
 
       a {
-        color: $orange;
+        color: $blue;
         transition: $menu-transition;
 
         &:hover {
+          color: $orange;
+          transition: $menu-transition;
+        }
+      }
+      .profile-image {
+        margin-right: 1em;
+        img {
+          max-height: 3.5em;
+          border-radius: 1em;
+        }
+      }
+
+      .author-name {
+        font-size: 1em;
+        font-weight: 600;
+      }
+      
+      .post-tags {
+        margin-top: 0.5em;
+        font-size: 0.75em;
+        font-weight: 600;
+        a {
+          color: $orange;
+          transition: $menu-transition;
+        } 
+        a:hover {
           color: $blue;
           transition: $menu-transition;
         }
@@ -141,7 +169,7 @@
     width: 33%;
     margin: auto;
     height: 0.3em;
-    background-color: $dark;
+    background-color: $blue;
   }
 }
 

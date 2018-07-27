@@ -3,7 +3,7 @@
     <div class="j-post {{post_class}}">
       <div class="post-image">
         {{#if feature_image}}
-          <a href="{{url absolute="true"}}"><img src="{{img_url feature_image}}" alt="Feature Image"></a>
+          <a href="{{url absolute="true"}}"><img src="{{img_url feature_image}}"></a>
         {{/if}}
       </div>
      
@@ -14,8 +14,24 @@
         <p>{{excerpt words="30"}} ...</p>
       </div>
       <div class="post-meta">
-        {{author}}
-        {{tags}}
+        {{#primary_author}}
+          {{#if profile_image}}
+            <div class="profile-image">
+              <img src="{{img_url profile_image}}">
+            </div>
+          {{/if}}
+          <div>
+            <div class="author-name">
+              <a href="{{url}}">{{name}}</a>
+            </div>
+            {{/primary_author}}
+            <div class="post-tags">
+              {{tags}}
+            </div>
+            {{!-- Need to exit authoer scope to display tags --}}
+          </div>
+        
+        
       </div>
     </div>
     <div class="j-postbreak"></div>
