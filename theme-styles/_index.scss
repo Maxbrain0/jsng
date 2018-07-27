@@ -173,3 +173,31 @@
   }
 }
 
+nav.pagination {
+  margin: auto;
+  margin-top: 2em;
+  text-align: center;
+
+  a {
+    color: $blue;
+    transition: $menu-transition;
+    text-decoration: none;
+  }
+  a:visited {
+    text-decoration: none;
+  }
+  a:hover {
+    color: $orange;
+    transition: $menu-transition;
+  }
+
+  .page-number {
+    color: $blue;
+    font-weight: 600;
+    margin: 0 1em 0 1em;
+  }
+
+  .fa-chevron-circle-left, .fa-chevron-circle-right {
+    color: $orange;
+  }
+}
