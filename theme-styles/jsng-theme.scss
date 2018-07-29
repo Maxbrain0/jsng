@@ -54,3 +54,14 @@ p {
   font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-size: 1.25em;
 }
+
+.caption {
+  // can be used inside of markdown for image captions
+  color: $dark;
+  margin-top: -20px;
+  margin-bottom: 40px;
+  font-style: italic;
+  text-align: center;
+  font-size: 1em;
+  line-height: 1.2;
+}
