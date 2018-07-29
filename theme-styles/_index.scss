@@ -13,17 +13,13 @@
     bottom: 10%;
     left: 50%;
     transform: translate(-50%, 0%);
-
-    h1 {
-      margin-bottom: 5px;
-      font-size: 1.5em;
-      text-shadow: 2px 2px $blue;
-    }
-    h2 {
-      margin-top: 0px;
-      margin-bottom: 0px;
-      font-size: 1em;
-      text-shadow: 2px 2px $blue;
+    text-shadow: 2px 2px $blue;
+    
+    h1, h2, h3, h4, h5 {
+      font-weight: 900;
+      color: $white;
+      margin-bottom: 0.25em;
+      margin-top: 0.25em;
     }
   }
 }
