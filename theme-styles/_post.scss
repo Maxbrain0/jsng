@@ -110,4 +110,35 @@
       
     }
   }
+
+  .post-pagination {
+    display: flex;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-top: 2em;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: center;
+
+    .next-post {
+      margin-top: 2em;
+    }
+    
+    a {
+      color: $blue;
+      transition: $menu-transition;
+      text-decoration: none;
+    }
+    a:visited {
+      text-decoration: none;
+    }
+    a:hover {
+      color: $orange;
+      transition: $menu-transition;
+    }
+    
+    .fa-chevron-circle-left, .fa-chevron-circle-right {
+      color: $orange;
+    }
+  }
 }

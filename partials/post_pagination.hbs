@@ -1,0 +1,9 @@
+<nav class="post-pagination" role="navigation">
+  {{#prev_post}}
+	<a class = "prev-post" href="{{url}}"><span class="fas fa-chevron-circle-left"></span> Prev: {{title}}</a>
+	{{/prev_post}}
+
+	{{#next_post}}
+	<a class="next-post" href="{{url}}">{{title}}: Next <span class="fas fa-chevron-circle-right"></span></a>
+	{{/next_post}}
+</nav>
