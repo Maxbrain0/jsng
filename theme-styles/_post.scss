@@ -75,11 +75,16 @@
   }
 
   .post-content {
-    @include margin-mixin();
+    margin-left: 36px;
+    margin-right: 36px;
+    @media screen and (max-width: $breakpoint) {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
     margin-top: 2.5em;
     max-width: $max-reading-width;
-    margin-left: auto;
-    margin-right: auto;
 
     p {
       line-height: 1.5;
