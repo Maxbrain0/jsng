@@ -1,15 +1,15 @@
+@mixin margin-mixin() {
+  margin-left: 36px;
+  margin-right: 36px;
+  @media screen and (max-width: $breakpoint) {
+    margin-left: 18px;
+    margin-right: 18px;
+  }
+}
+
 #j-post-page {
   max-width: 100%;
-  @media screen and (max-width: $breakpoint) {
-    padding: 0 2em 0 2em; // narrower side padding for smaller screens
-  }
-  padding: 0 3em 0 3em; //makes a nice little distincting from header and image content
 
-  img {
-    max-width: 100%;
-    display: block;
-    margin: auto;
-  }
 
   a {
     color: $orange;
@@ -25,13 +25,18 @@
     margin-top: 3em;
     
     .post-title {
+      @include margin-mixin();
       font-weight: 900;
       font-size: 3em;
+      @media screen and (max-width: $breakpoint) {
+        font-size: 2em;
+      }
       text-align: center;
       margin-bottom: 0.5em;
     }
 
     .post-meta {
+      @include margin-mixin();
       text-align: center;
       margin-bottom: 2em;
     }
@@ -46,9 +51,11 @@
     .post-image {
       margin-top: 2em;
       margin-bottom: 2em;
+      max-width: 100%;
     }
 
     .j-author {
+      @include margin-mixin();
       margin-top: 2em;
       display: flex;
       justify-content: center;
@@ -68,6 +75,7 @@
   }
 
   .post-content {
+    @include margin-mixin();
     margin-top: 2.5em;
     max-width: $max-reading-width;
     margin-left: auto;
@@ -75,6 +83,9 @@
 
     p {
       line-height: 1.5;
+      img {
+        max-width: 100%;
+      }
     }
 
     blockquote {
