@@ -1,12 +1,14 @@
 <div id="j-posts-list">
   {{#foreach posts}}
+  {{#if feature_image}}
     <div class="j-post {{post_class}}">
       <div class="post-image">
-        {{#if feature_image}}
-          <a href="{{url absolute="true"}}"><img src="{{img_url feature_image}}"></a>
-        {{/if}}
+        <a href="{{url absolute="true"}}"><img src="{{img_url feature_image}}"></a>
       </div>
-     
+  {{else}}
+    {{!-- Center post content if no feature immage available--}}
+     <div class="j-post centered {{post_class}}">
+  {{/if}}
         <div class="post-header">
            <a href="{{url absolute="true"}}">{{title}}</a>
         </div>

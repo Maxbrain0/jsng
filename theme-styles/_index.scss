@@ -72,8 +72,12 @@
                           "excerpt image"
                           "meta image";
       grid-template-columns: 2fr 1fr;
-      
-  
+
+      &.centered {
+        // Apply this class when no post image
+        grid-template-areas: "header" "excerpt" "meta";
+        grid-template-columns: 1fr;
+      }
       
     }
 
