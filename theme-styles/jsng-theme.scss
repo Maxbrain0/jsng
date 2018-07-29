@@ -4,20 +4,25 @@
 @import '_post';
 
 
+
 body {
   font-size: 1em;
   font-weight: 400;
   color: $dark;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   max-width: $max-column-width;
-  margin: auto;
   padding-bottom: 5em;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-y: scroll;
+  // position: static;
 
-  &.noscroll {
-    // nav menu is open, don't scroll body, but only navigation for short screens
-    overflow: hidden;
-  }
+  // &.noscroll {
+  //   // nav menu is open, don't scroll body, but only navigation for short screens
+  //   overflow-y: hidden;
+  // }
 }
+
 
 h1,h2,h3,h4,h5 {
   font-weight: 600;

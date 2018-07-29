@@ -15,14 +15,12 @@ menuToggle.addEventListener('click', () => {
     menuArrow.classList.add('menu-opened');
     menuArrow.classList.remove('menu-closed');
     navSelection.classList.add('opened');
-    navSelection.classList.remove('closed');
     document.body.classList.add('noscroll'); // scroll nav, not body
     menuOpened = !menuOpened;
   } else {
     menuArrow.classList.remove('menu-opened');
     menuArrow.classList.add('menu-closed');
     navSelection.classList.remove('opened');
-    navSelection.classList.add('closed');
     document.body.classList.remove('noscroll');
     menuOpened = !menuOpened;
   }

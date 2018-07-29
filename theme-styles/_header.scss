@@ -63,23 +63,26 @@
 
 #j-navbar {
   position: fixed;
-  max-width: inherit;
+  max-width: $max-column-width;
   width: 100%;
   top: 4em; // fixed dimension of header bar
   bottom: 0; // don't want quite 100% height;
   background-color: rgba($blue, 0.90);
-  overflow-x: hidden;
+  transition: opacity $menu-transition;
+  z-index: -1;
+  opacity: 0;
 
-  &.closed {
-    transition: opacity $menu-transition;
-    z-index: -1;
-    opacity: 0;
-  }
+  // &.closed {
+  //   transition: opacity $menu-transition;
+  //   z-index: -1;
+  //   opacity: 0;
+  // }
   &.opened {
+    z-index:1;
+    overflow-x: hidden;
     transition: opacity $menu-transition;
     overflow-y: auto;
     opacity: 1;
-    z-index:1;
   }
 
   .nav-links {
