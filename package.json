@@ -5,6 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "run-p parcel browsersync",
+    "build": "./node_modules/.bin/parcel build ./theme-js/entry.js -d ./assets --out-file theme.js --no-source-maps --experimental-scope-hoisting --no-minify",
     "parcel": "./node_modules/.bin/parcel watch ./theme-js/entry.js -d ./assets --out-file theme.js",
     "browsersync": "./node_modules/.bin/browser-sync start --config ./bs-config.js"
   },
