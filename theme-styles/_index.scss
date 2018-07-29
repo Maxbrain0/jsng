@@ -68,19 +68,13 @@
       align-items: center; 
       row-gap: 0.5em;
       column-gap: 3em;
-      &:nth-child(4n+1) {
-        grid-template-areas:"header image"
-                            "excerpt image"
-                            "meta image";
-        grid-template-columns: 2fr 1fr;
-      }
+      grid-template-areas:"header image"
+                          "excerpt image"
+                          "meta image";
+      grid-template-columns: 2fr 1fr;
+      
   
-      &:nth-child(4n+3) {
-        grid-template-areas:  "image header"
-                            "image excerpt"
-                            "image meta";
-        grid-template-columns: 1fr 2fr;
-      }
+      
     }
 
     @media screen and (max-width: $breakpoint) {
