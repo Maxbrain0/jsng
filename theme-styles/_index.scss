@@ -33,10 +33,10 @@
 
 #j-posts-list {
   display: grid;
-  row-gap: 4em;
+  grid-row-gap: 4em;
   @media screen and (max-width: $breakpoint) {
     padding: 0 2em 0 2em; // narrower side padding for smaller screens
-    row-gap: 2em;
+    grid-row-gap: 2em;
   }
   padding: 0 3em 0 3em; //makes a nice little distincting from header and image content
   margin: auto;
@@ -62,7 +62,7 @@
     @media screen and (min-width: $breakpoint) {
       // larger screen grid
       align-items: center; 
-      row-gap: 0.5em;
+      grid-row-gap: 0.5em;
       column-gap: 3em;
       grid-template-areas:"header image"
                           "excerpt image"
@@ -79,7 +79,7 @@
 
     @media screen and (max-width: $breakpoint) {
       // smaller screen grid
-      row-gap: 0.5em;
+      grid-row-gap: 0.5em;
       grid-template-areas:"header"
                           "image"
                           "exceprt"
