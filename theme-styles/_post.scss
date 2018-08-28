@@ -144,9 +144,28 @@
 }
 
 .kg-width-wide {
-
+  display: block;
+  width: 100%;
 }
 
 .kg-width-full {
-  
+  display: block;
+  width: 100%
+}
+
+.kg-embed-card {
+  margin-bottom: 2em;
+  iframe {
+    display: block;
+    margin: auto;
+  }
+}
+
+figcaption {
+  color: $dark;
+  border-left: 0.25em $orange solid;
+  border-right: 0.25em $orange solid;
+  font-style: italic;
+  margin-top: 0.5em;
+  text-align: center;
 }
