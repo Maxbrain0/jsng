@@ -13,7 +13,9 @@
     "blog",
     "theme",
     "ghost",
-    "ghost-theme"
+    "ghost-theme",
+    "parcel",
+    "starter"
   ],
   "author": {
     "name": "Jacob Goodwin",
