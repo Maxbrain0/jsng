@@ -73,28 +73,47 @@
   }
 
   .post-content {
+    display: block;
+    width: 80%;
     margin: auto;
-    padding-left: 36px;
-    padding-right: 36px;
+
     @media screen and (max-width: $breakpoint) {
-      width: 90%;
-      padding-left: 0;
-      padding-right: 0;
+      width: 92%;
       margin-left: auto;
       margin-right: auto;
     }
     
     margin-top: 2.5em;
-    max-width: $max-reading-width;
+    // max-width: $max-reading-width;
+    article {
+      display: flex;
+      flex-direction: column;
+      
+      img {
+        display: block;
+        //default image size
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      figure {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+      }
+  
+      figcaption {
+        margin-top: 1em;
+        text-align: center;
+        color: $blue;
+        font-weight: bold;
+        border-left: 5px $orange solid;
+      }
+    }
 
     p {
       line-height: 1.5;
-      img {
-        display:  block;
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 100%;
-      }
     }
 
     blockquote {
@@ -108,6 +127,56 @@
         line-height: 1.2;
       }
       
+    }
+   
+
+    .kg-embed-card {
+      display: flex;
+      flex-direction: column;
+      iframe {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .instagram-media {
+        margin-left: auto !important; // override instagram's stupid left alignment - bleh
+        margin-right: auto !important;
+      }
+    }
+    
+    .kg-width-wide {
+      img {
+        max-width: 90%;
+      }
+    }
+
+    .kg-width-full {
+      img {
+        max-width: 100%;
+      }
+    }
+
+    @media screen and (max-width: $breakpoint) {
+      .kg-width-wide {
+        img {
+          max-width: 90vw;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+      
+      .kg-width-full {
+        align-self: center;
+        img {
+          max-width: 100vw;
+        }
+        figcaption {
+          width: 92%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
     }
   }
 
@@ -141,31 +210,4 @@
       color: $orange;
     }
   }
-}
-
-.kg-width-wide {
-  display: block;
-  width: 100%;
-}
-
-.kg-width-full {
-  display: block;
-  width: 100%
-}
-
-.kg-embed-card {
-  margin-bottom: 2em;
-  iframe {
-    display: block;
-    margin: auto;
-  }
-}
-
-figcaption {
-  color: $dark;
-  border-left: 0.25em $orange solid;
-  border-right: 0.25em $orange solid;
-  font-style: italic;
-  margin-top: 0.5em;
-  text-align: center;
 }

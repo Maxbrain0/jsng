@@ -2,7 +2,7 @@
 
 <!-- Everything inside the #post tags pulls data from the post -->
 {{#post}}         
-<article id="j-post-page" class="{{post_class}}">
+<div id="j-post-page" class="{{post_class}}">
   <header class="post-header">
     <h1 class="post-title">{{title}}</h1>
     <section class="post-meta">
@@ -30,12 +30,12 @@
     </div>
   </header>
   <section class="post-content">
-    {{content}}
+    <article>
+      {{content}}
+    </article>
   </section>
 
   {{>post_pagination}}     
-</article>
-
-
+</div>
 
 {{/post}}   
