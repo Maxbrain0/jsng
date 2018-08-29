@@ -7,7 +7,7 @@ import { faChevronCircleDown, faChevronCircleLeft, faChevronCircleRight } from '
 import { faFacebookSquare, faTwitterSquare, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 // import reframe for making embed videos full column width
-import noframe from 'reframe.js/dist/noframe.js';
+import reframe from 'reframe.js/dist/noframe.js';
 
 // Add all icons to the library so you can use it in your page
 library.add(faChevronCircleDown, faChevronCircleRight, faChevronCircleLeft, 
@@ -18,4 +18,4 @@ dom.watch();
 import './navToggles';
 
 // reframe embeds
-noframe('iframe','figure');
+reframe('iframe');
