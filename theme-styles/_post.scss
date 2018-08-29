@@ -135,12 +135,12 @@
       display: flex;
       flex-direction: column;
       iframe {
-        max-width: 100%;
         margin-left: auto;
         margin-right: auto;
       }
 
       .instagram-media {
+        min-width: 200px !important; // for mobile phone screens that aren't wide
         margin-left: auto !important; // override instagram's stupid left alignment - bleh
         margin-right: auto !important;
       }
