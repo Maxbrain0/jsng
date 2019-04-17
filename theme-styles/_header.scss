@@ -4,17 +4,17 @@
   margin-top: 1em;
   margin-bottom: 1em;
   height: 2em;
-  
+
   .j-logo {
     margin-left: 1em;
     height: inherit;
-    align-self: flex-end;  
+    align-self: flex-end;
   }
-  
+
   img {
     max-height: 100%;
   }
-  
+
   .j-menu-toggle {
     align-self: flex-end;
     margin-right: 1em;
@@ -46,7 +46,7 @@
     transition: $menu-transition;
     animation: fliparrow $menu-transition linear;
     transform: rotate(180deg);
-  } 
+  }
 }
 
 @keyframes fliparrow {
@@ -63,11 +63,10 @@
 
 #j-navbar {
   position: fixed;
-  max-width: $max-column-width;
-  width: 100%;
+  // width: inherit;
   top: 4em; // fixed dimension of header bar
   bottom: 0; // don't want quite 100% height;
-  background-color: rgba($blue, 0.90);
+  background-color: rgba($blue, 0.9);
   transition: opacity $menu-transition;
   z-index: -1;
   opacity: 0;
@@ -78,7 +77,7 @@
   //   opacity: 0;
   // }
   &.opened {
-    z-index:1;
+    z-index: 1;
     overflow-x: hidden;
     transition: opacity $menu-transition;
     overflow-y: auto;
@@ -142,17 +141,15 @@
       color: $white;
       margin-left: 1em;
       margin-right: 1em;
-      @media screen and (max-width: $breakpoint){
+      @media screen and (max-width: $breakpoint) {
         margin-left: 0.25em;
         margin-right: 0.25em;
       }
 
       &:hover {
-        color:$orange;
+        color: $orange;
         transition: $menu-transition;
       }
     }
   }
 }
-
-

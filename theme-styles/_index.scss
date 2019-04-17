@@ -38,146 +38,48 @@
   background-color: $orange;
 }
 
-#j-posts-list {
-  display: grid;
-  grid-row-gap: 4em;
-  @media screen and (max-width: $breakpoint) {
-    padding: 0 2em 0 2em; // narrower side padding for smaller screens
-    grid-row-gap: 2em;
-  }
-  padding: 0 0; //makes a nice little distincting from header and image content
-  margin: auto;
-  margin-top: 2.5em;
-  color: $dark;
+.j-posts-list {
+  // will redo post list
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-  a {
-    text-decoration: none;
-
-    &:link {
-      text-decoration: none;
-    }
-    &:visited {
-      text-decoration: none;
-    }
-  }
+  max-width: 100%;
+  margin: 2em;
 
   .j-post {
-    display: grid;
-    width: inherit;
-
-    @media screen and (min-width: $breakpoint) {
-      // larger screen grid
-      align-items: center;
-      grid-row-gap: 0.5em;
-      column-gap: 3em;
-      grid-template-areas:
-        'header image'
-        'excerpt image'
-        'meta image';
-      grid-template-columns: 4fr 3fr;
-
-      &.centered {
-        // Apply this class when no post image
-        grid-template-areas: 'header' 'excerpt' 'meta';
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media screen and (max-width: $breakpoint) {
-      // smaller screen grid
-      grid-row-gap: 0.5em;
-      grid-template-areas:
-        'header'
-        'image'
-        'exceprt'
-        'meta';
-    }
-
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
     .post-image {
-      grid-area: image;
+      align-self: center;
       img {
-        width: 100%;
+        max-width: 100vw;
       }
-    }
-
-    .post-header {
-      grid-area: header;
-      font-size: 1.5em;
-      color: $blue;
-      font-weight: 600;
-
-      a {
-        color: $blue;
-        transition: $menu-transition;
-
-        &:hover {
-          color: $orange;
-          transition: $menu-transition;
-        }
-      }
-    }
-    .post-excerpt {
-      grid-area: excerpt;
     }
 
     .post-meta {
-      grid-area: meta;
-      display: flex;
-      justify-content: flex-start;
-      align-items: flex-start;
-
-      a {
-        color: $blue;
-        transition: $menu-transition;
-
-        &:hover {
-          color: $orange;
-          transition: $menu-transition;
-        }
-      }
-      .profile-image {
-        margin-right: 1em;
-        img {
-          max-height: 3.5em;
-          border-radius: 1em;
-        }
-      }
-
-      .author-name {
-        font-size: 1em;
-        font-weight: 600;
-      }
-
-      .post-tags {
-        margin-top: 0.5em;
-        font-size: 0.75em;
-        font-weight: 600;
-        a {
-          color: $orange;
-          transition: $menu-transition;
-        }
-        a:hover {
-          color: $blue;
-          transition: $menu-transition;
-        }
+      img {
+        max-width: 100px;
       }
     }
   }
 
-  .j-postbreak {
-    width: 33%;
-    margin: auto;
-    height: 0.3em;
-    background-color: $orange;
+  @media screen and (min-width: $breakpoint) {
+    .j-post {
+      img {
+        max-width: 100%;
+      }
+    }
   }
 }
 
 nav.pagination {
   display: flex;
-  justify-content: center;
-  margin: auto;
+  align-items: center;
   margin-top: 2em;
   text-align: center;
+  flex-direction: column;
 
   a {
     color: $blue;
@@ -195,7 +97,7 @@ nav.pagination {
   .page-number {
     color: $blue;
     font-weight: 600;
-    margin: 0 1em 0 1em;
+    margin: 1em 1em 1em 1em;
   }
 
   .fa-chevron-circle-left,
@@ -203,10 +105,11 @@ nav.pagination {
     color: $orange;
   }
 
-  @media screen and (max-width: $breakpoint) {
-    flex-direction: column;
+  @media screen and (min-width: $breakpoint) {
+    flex-direction: row;
+    justify-content: center;
     .page-number {
-      margin: 1em 1em 1em 1em;
+      margin: 0 1em 0 1em;
     }
   }
 }

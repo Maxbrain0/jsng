@@ -3,8 +3,6 @@
 @import '_index';
 @import '_post';
 
-
-
 body {
   font-size: 1em;
   font-weight: 400;
@@ -23,8 +21,11 @@ body {
   // }
 }
 
-
-h1,h2,h3,h4,h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-weight: 600;
   color: $blue;
 }
@@ -44,7 +45,6 @@ h4 {
 h5 {
   font-size: 1.4em;
 }
-
 
 a {
   text-decoration: none;
