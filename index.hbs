@@ -3,11 +3,11 @@
 into the {body} of the default.hbs template --}}
 
 <div class="j-cover-image">
-  {{#if @blog.logo}}
-  <img src="{{@blog.cover_image}}" alt="Cover Image">
+  {{#if @site.logo}}
+  <img src="{{@site.cover_image}}" alt="Cover Image">
   <div class="j-image-text">
-    <h3>{{@blog.title}}</h3>
-    <h4>{{@blog.description}}</h4>
+    <h3>{{@site.title}}</h3>
+    <h4>{{@site.description}}</h4>
   </div>
   {{/if}}
 </div>

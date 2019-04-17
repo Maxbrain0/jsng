@@ -1,25 +1,25 @@
 <div id="j-logo-header">
-    <a class="j-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo"></a> 
-    <div class="j-menu-toggle" href="#">
-      <span class="fas fa-chevron-circle-down"></span> 
-      <span>Menu</span>
-    </div>
+  <a class="j-logo" href="{{@site.url}}"><img src="{{@site.logo}}" alt="Blog Logo"></a>
+  <div class="j-menu-toggle" href="#">
+    <span class="fas fa-chevron-circle-down"></span>
+    <span>Menu</span>
+  </div>
 </div>
 
 <nav id="j-navbar">
   <div class="nav-links">
     {{#foreach navigation}}
-      <a class="{{#if current}}j-navbar-current{{/if}}" href="{{url absolute="true"}}">{{ label }}</a>
+    <a class="{{#if current}}j-navbar-current{{/if}}" href="{{url absolute="true"}}">{{ label }}</a>
     {{/foreach}}
   </div>
   <div class="social-links">
-    {{#if @blog.facebook}}
-    <a href="{{facebook_url @blog.facebook}}" target="_blank">
+    {{#if @site.facebook}}
+    <a href="{{facebook_url @site.facebook}}" target="_blank">
       <span class="social-icon fab fa-facebook-square"></span>
     </a>
     {{/if}}
-    {{#if @blog.twitter}}
-    <a href="{{twitter_url @blog.twitter}}" target="_blank">
+    {{#if @site.twitter}}
+    <a href="{{twitter_url @site.twitter}}" target="_blank">
       <span class="social-icon fab fa-twitter-square"></span>
     </a>
     {{/if}}
