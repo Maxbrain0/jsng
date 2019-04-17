@@ -39,19 +39,27 @@
 }
 
 .j-posts-list {
-  // will redo post list
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  max-width: 100%;
   margin: 2em;
 
   .j-post {
     display: flex;
     flex-direction: column;
-    max-width: 100%;
+
+    .post-header {
+      text-align: center;
+      margin-bottom: 1em;
+      a {
+        font-size: 1.6em;
+        color: $blue;
+        &:hover {
+          color: $orange;
+          transition: $menu-transition;
+        }
+      }
+    }
+
     .post-image {
+      margin-bottom: 1em;
       align-self: center;
       img {
         max-width: 100vw;
@@ -65,10 +73,21 @@
     }
   }
 
+  .j-postbreak {
+    width: 50%;
+    margin: 0em auto 2em auto;
+    height: 0.25em;
+    background-color: $blue;
+  }
+
   @media screen and (min-width: $breakpoint) {
+    margin-left: 4em;
+    margin-right: 4em;
     .j-post {
-      img {
-        max-width: 100%;
+      .post-image {
+        img {
+          max-width: $breakpoint;
+        }
       }
     }
   }
