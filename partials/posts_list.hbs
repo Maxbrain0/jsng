@@ -7,8 +7,8 @@
     {{#if feature_image}}
 
     <div class="post-image">
-      {{!-- <a href="{{url absolute="true"}}"><img src="{{img_url feature_image}}"></a> --}}
-      <img src="{{img_url feature_image}}">
+      <a href="{{url absolute="true"}}"><img src="{{img_url feature_image}}"></a>
+      {{!-- <img src="{{img_url feature_image}}"> --}}
     </div>
 
     {{/if}}
@@ -16,10 +16,12 @@
       {{#primary_author}}
       {{#if profile_image}}
       <div class="profile-image">
-        <img src="{{img_url profile_image}}">
+        <a href="{{url}}">
+          <img src="{{img_url profile_image}}">
+        </a>
       </div>
       {{/if}}
-      <div>
+      <div class="author-tags">
         <div class="author-name">
           <a href="{{url}}">{{name}}</a>
         </div>
@@ -30,10 +32,10 @@
         {{!-- Need to exit author scope to display tags --}}
       </div>
     </div>
-    <div class="post-exceprt">
+    <div class="post-excerpt">
       <p>{{excerpt words="30"}} ...</p>
     </div>
+    <div class="j-postbreak"></div>
   </div>
-  <div class="j-postbreak"></div>
   {{/foreach}}
 </div>
