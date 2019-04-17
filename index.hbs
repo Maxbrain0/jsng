@@ -6,8 +6,8 @@ into the {body} of the default.hbs template --}}
   {{#if @site.logo}}
   <img src="{{@site.cover_image}}" alt="Cover Image">
   <div class="j-image-text">
-    <h3>{{@site.title}}</h3>
-    <h4>{{@site.description}}</h4>
+    <div class="j-site-title-text">{{@site.title}}</div>
+    <div class="j-site-desc-text">{{@site.description}}</div>
   </div>
   {{/if}}
 </div>

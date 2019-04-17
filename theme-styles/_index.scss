@@ -2,7 +2,8 @@
   position: relative;
   text-align: center;
   color: $white;
-  
+  margin-top: 1.5em;
+
   img {
     max-width: 100%;
     filter: brightness(85%) opacity(95%);
@@ -14,12 +15,18 @@
     left: 50%;
     transform: translate(-50%, 0%);
     text-shadow: 2px 2px $blue;
-    
-    h1, h2, h3, h4, h5 {
-      font-weight: 900;
-      color: $white;
-      margin-bottom: 0.25em;
-      margin-top: 0.25em;
+
+    font-weight: 900;
+    color: $white;
+    margin-bottom: 0.25em;
+    margin-top: 0.25em;
+
+    .j-site-title-text {
+      font-size: 1.4em;
+    }
+
+    .j-site-desc-text {
+      font-size: 1.2em;
     }
   }
 }
@@ -38,10 +45,10 @@
     padding: 0 2em 0 2em; // narrower side padding for smaller screens
     grid-row-gap: 2em;
   }
-  padding: 0 3em 0 3em; //makes a nice little distincting from header and image content
+  padding: 0 0; //makes a nice little distincting from header and image content
   margin: auto;
   margin-top: 2.5em;
-  color: $dark; 
+  color: $dark;
 
   a {
     text-decoration: none;
@@ -53,40 +60,39 @@
       text-decoration: none;
     }
   }
-  
 
   .j-post {
     display: grid;
     width: inherit;
-    
+
     @media screen and (min-width: $breakpoint) {
       // larger screen grid
-      align-items: center; 
+      align-items: center;
       grid-row-gap: 0.5em;
       column-gap: 3em;
-      grid-template-areas:"header image"
-                          "excerpt image"
-                          "meta image";
-      grid-template-columns: 2fr 1fr;
+      grid-template-areas:
+        'header image'
+        'excerpt image'
+        'meta image';
+      grid-template-columns: 4fr 3fr;
 
       &.centered {
         // Apply this class when no post image
-        grid-template-areas: "header" "excerpt" "meta";
+        grid-template-areas: 'header' 'excerpt' 'meta';
         grid-template-columns: 1fr;
       }
-      
     }
 
     @media screen and (max-width: $breakpoint) {
       // smaller screen grid
       grid-row-gap: 0.5em;
-      grid-template-areas:"header"
-                          "image"
-                          "exceprt"
-                          "meta";
+      grid-template-areas:
+        'header'
+        'image'
+        'exceprt'
+        'meta';
     }
 
-    
     .post-image {
       grid-area: image;
       img {
@@ -98,7 +104,7 @@
       grid-area: header;
       font-size: 1.5em;
       color: $blue;
-      font-weight: 600; 
+      font-weight: 600;
 
       a {
         color: $blue;
@@ -119,7 +125,6 @@
       display: flex;
       justify-content: flex-start;
       align-items: flex-start;
-
 
       a {
         color: $blue;
@@ -142,7 +147,7 @@
         font-size: 1em;
         font-weight: 600;
       }
-      
+
       .post-tags {
         margin-top: 0.5em;
         font-size: 0.75em;
@@ -150,7 +155,7 @@
         a {
           color: $orange;
           transition: $menu-transition;
-        } 
+        }
         a:hover {
           color: $blue;
           transition: $menu-transition;
@@ -193,11 +198,12 @@ nav.pagination {
     margin: 0 1em 0 1em;
   }
 
-  .fa-chevron-circle-left, .fa-chevron-circle-right {
+  .fa-chevron-circle-left,
+  .fa-chevron-circle-right {
     color: $orange;
   }
 
-  @media screen and (max-width: $breakpoint){
+  @media screen and (max-width: $breakpoint) {
     flex-direction: column;
     .page-number {
       margin: 1em 1em 1em 1em;
