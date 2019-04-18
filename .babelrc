@@ -1,3 +1,27 @@
 {
-  "presets": ["@babel/preset-env"]
+  "presets": ["@babel/preset-env"],
+  "plugins": [
+    [
+      "prismjs",
+      {
+        "languages": [
+          "javascript",
+          "css",
+          "markup",
+          "clike",
+          "handlebars",
+          "go",
+          "graphql",
+          "json",
+          "markdown",
+          "python",
+          "jsx",
+          "scss",
+          "typescript"
+        ],
+        "theme": "tomorrow",
+        "css": true
+      }
+    ]
+  ]
 }
