@@ -192,20 +192,21 @@
     }
 
     .kg-gallery-card {
-      max-width: 100%;
+      width: 100vw;
+      max-width: $max-column-width;
       .kg-gallery-container {
         align-self: center;
         .kg-gallery-row {
           display: flex;
           flex-wrap: wrap;
-          justify-content: space-around;
+          justify-content: center;
           .kg-gallery-image {
             img {
               max-width: 100vw;
               height: auto;
             }
             @media (min-width: $breakpoint) {
-              max-width: 50%;
+              max-width: 33.3%;
               img {
                 width: 100%;
               }
