@@ -105,10 +105,12 @@
       figcaption {
         margin-top: 1em;
         color: $blue;
-        font-weight: bold;
-        border-left: 5px $orange solid;
-        padding-left: 1em;
-        padding-right: 2em;
+        font-style: italic;
+        text-align: center;
+        padding-bottom: 1em;
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+        border-bottom: 1px solid $orange;
       }
     }
 
@@ -161,9 +163,6 @@
       align-self: center; // works because flex direction is "column"!
       img {
         max-width: 100vw;
-      }
-      figcaption {
-        margin-left: 1em;
       }
     }
 
