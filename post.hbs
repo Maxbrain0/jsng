@@ -1,32 +1,32 @@
 {{!< default}}
 
 <!-- Everything inside the #post tags pulls data from the post -->
-{{#post}}         
-<div id="j-post-page" class="{{post_class}}">
+{{#post}}
+<div class="j-post-page" class="{{post_class}}">
   <header class="post-header">
     <h1 class="post-title">{{title}}</h1>
     <section class="post-meta">
       <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">
         {{date format="DD MMMM YYYY"}}
-      </time> 
+      </time>
       {{tags prefix=" in "}}
-    </section>  
+    </section>
     <div class="j-titlebreak"></div>
     {{#if feature_image}}
     <img class="post-image" src="{{img_url feature_image}}">
     <div class="j-titlebreak"></div>
     {{/if}}
     <div class="j-author">
-    {{#primary_author}}
-    {{#if profile_image}}
-    <div class="profile-image">
-      <img src="{{img_url profile_image}}">
-    </div>
-    {{/if}}
-    <div class="author-name">
-      <a href="{{url}}">{{name}}</a>
-    </div>
-    {{/primary_author}}
+      {{#primary_author}}
+      {{#if profile_image}}
+      <div class="profile-image">
+        <img src="{{img_url profile_image}}">
+      </div>
+      {{/if}}
+      <div class="author-name">
+        <a href="{{url}}">{{name}}</a>
+      </div>
+      {{/primary_author}}
     </div>
   </header>
   <section class="post-content">
@@ -35,7 +35,7 @@
     </article>
   </section>
 
-  {{>post_pagination}}     
+  {{>post_pagination}}
 </div>
 
-{{/post}}   
+{{/post}}

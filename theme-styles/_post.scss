@@ -7,9 +7,8 @@
   }
 }
 
-#j-post-page {
+.j-post-page {
   max-width: 100%;
-
 
   a {
     color: $orange;
@@ -23,7 +22,7 @@
 
   .post-header {
     margin-top: 3em;
-    
+
     .post-title {
       @include margin-mixin();
       font-weight: 900;
@@ -82,13 +81,13 @@
       margin-left: auto;
       margin-right: auto;
     }
-    
+
     margin-top: 2.5em;
     // max-width: $max-reading-width;
     article {
       display: flex;
       flex-direction: column;
-      
+
       img {
         display: block;
         //default image size
@@ -102,7 +101,7 @@
         margin-top: 1.5em;
         margin-bottom: 1.5em;
       }
-  
+
       figcaption {
         margin-top: 1em;
         color: $blue;
@@ -123,13 +122,11 @@
       margin-right: 0em;
       margin-bottom: 2em;
       padding-left: 3em;
-      p{
+      p {
         font-size: 1em;
         line-height: 1.2;
       }
-      
     }
-   
 
     .kg-embed-card {
       display: flex;
@@ -145,56 +142,94 @@
         margin-right: auto !important;
       }
     }
-    
+
     .kg-image-card {
       align-self: center;
       img {
-        max-width: 100%;
+        max-width: 80vw;
       }
     }
 
     .kg-width-wide {
       align-self: center;
       img {
-        max-width: calc(#{$max-column-width} - 5em);
+        max-width: 90vw;
       }
     }
 
     .kg-width-full {
-      align-self: center;
+      align-self: center; // works because flex direction is "column"!
       img {
-        max-width: $max-column-width;
+        max-width: 100vw;
       }
       figcaption {
         margin-left: 1em;
       }
     }
 
-    @media screen and (max-width: $breakpoint) {
+    @media screen and (min-width: $breakpoint) {
       .kg-image-card {
         align-self: center;
         img {
-          max-width: 80vw;
+          max-width: 100%;
         }
       }
 
       .kg-width-wide {
         align-self: center;
         img {
-          max-width: 90vw;
+          width: 90vw;
+          max-width: calc(#{$max-column-width} - 5em);
         }
       }
-      
+
       .kg-width-full {
-        align-self: center; // works because flex direction is "column"!
+        align-self: center;
         img {
-          max-width: 100vw;
+          width: 100vw;
+          max-width: $max-column-width;
         }
         figcaption {
           margin-left: 1em;
         }
       }
     }
+
+    // .kg-gallery-card {
+    //   .kg-gallery-container {
+    //     .kg-gallery-row {
+    //       display: flex;
+    //       flex-wrap: wrap;
+    //       .kg-gallery-image {
+    //         img {
+    //           max-width: 100vw;
+    //           height: auto;
+    //         }
+    //       }
+    //     }
+    //   }
+    // }
+
+    // @media screen and (min-width: $breakpoint) {
+    // .kg-gallery-card {
+    //   max-width: $max-column-width;
+    //   align-self: cecnter;
+    //   .kg-gallery-container {
+    //     align-self: center;
+    //     .kg-gallery-row {
+    //       display: flex;
+    //       flex-wrap: nowrap;
+    //       align-items: top;
+    //       .kg-gallery-image {
+    //         img {
+    //           max-width: 100%;
+    //           height: auto;
+    //         }
+    //       }
+    //     }
+    //   }
+    // }
+    // }
   }
 
   .post-pagination {
@@ -209,7 +244,7 @@
     .next-post {
       margin-top: 2em;
     }
-    
+
     a {
       color: $blue;
       transition: $menu-transition;
@@ -222,8 +257,9 @@
       color: $orange;
       transition: $menu-transition;
     }
-    
-    .fa-chevron-circle-left, .fa-chevron-circle-right {
+
+    .fa-chevron-circle-left,
+    .fa-chevron-circle-right {
       color: $orange;
     }
   }
