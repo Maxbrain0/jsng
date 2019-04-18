@@ -1,6 +1,5 @@
 import Prism from 'prismjs'
 // Configure prism
-Prism.highlightAll()
 
 // import the parent theme style
 import '../theme-styles/jsng-theme.scss'
@@ -37,3 +36,5 @@ import './navToggles'
 
 // reframe embeds
 reframe('iframe')
+
+Prism.highlightAll()

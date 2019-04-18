@@ -19,6 +19,7 @@
           "scss",
           "typescript"
         ],
+        "plugins": [],
         "theme": "tomorrow",
         "css": true
       }
