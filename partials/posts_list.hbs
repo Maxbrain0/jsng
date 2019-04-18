@@ -1,40 +1,40 @@
-<div id="j-posts-list">
+<div class="j-posts-list">
   {{#foreach posts}}
-  {{#if feature_image}}
-    <div class="j-post {{post_class}}">
-      <div class="post-image">
-        <a href="{{url absolute="true"}}"><img src="{{img_url feature_image}}"></a>
-      </div>
-  {{else}}
-    {{!-- Center post content if no feature immage available--}}
-     <div class="j-post centered {{post_class}}">
-  {{/if}}
-        <div class="post-header">
-           <a href="{{url absolute="true"}}">{{title}}</a>
-        </div>
-      <div class="post-exceprt">
-        <p>{{excerpt words="30"}} ...</p>
-      </div>
-      <div class="post-meta">
-        {{#primary_author}}
-          {{#if profile_image}}
-            <div class="profile-image">
-              <img src="{{img_url profile_image}}">
-            </div>
-          {{/if}}
-          <div>
-            <div class="author-name">
-              <a href="{{url}}">{{name}}</a>
-            </div>
-            {{/primary_author}}
-            <div class="post-tags">
-              {{tags}}
-            </div>
-            {{!-- Need to exit authoer scope to display tags --}}
-          </div> 
-      </div>   
+  <div class="j-post {{post_class}}">
+    <div class="post-header">
+      <a href="{{url absolute="true"}}">{{title}}</a>
     </div>
-    <div class="j-postbreak"></div>
-   
+    {{#if feature_image}}
+
+    <div class="post-image">
+      <a href="{{url absolute="true"}}"><img src="{{img_url feature_image}}"></a>
+      {{!-- <img src="{{img_url feature_image}}"> --}}
+    </div>
+
+    {{/if}}
+    <div class="post-meta">
+      {{#primary_author}}
+      {{#if profile_image}}
+      <div class="profile-image">
+        <a href="{{url}}">
+          <img src="{{img_url profile_image}}">
+        </a>
+      </div>
+      {{/if}}
+      <div class="author-tags">
+        <div class="author-name">
+          <a href="{{url}}">{{name}}</a>
+        </div>
+        {{/primary_author}}
+        <div class="post-tags">
+          {{tags}}
+        </div>
+        {{!-- Need to exit author scope to display tags --}}
+      </div>
+    </div>
+    <div class="post-excerpt">
+      <p>{{excerpt words="30"}} ...</p>
+    </div>
+  </div>
   {{/foreach}}
 </div>

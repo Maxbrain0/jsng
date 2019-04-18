@@ -4,7 +4,7 @@ $orange: rgb(232, 75, 13);
 $white: rgb(246, 246, 246);
 
 $hover: 500ms;
-$menu-transition: 500ms;
+$menu-transition: 250ms;
 
-$breakpoint: 1024px;
+$breakpoint: 768px; // 1px larger than iPad
 $max-column-width: 1024px;
