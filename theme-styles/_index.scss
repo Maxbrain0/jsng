@@ -50,6 +50,7 @@
     flex-direction: column;
     max-width: 100%;
     margin-bottom: 2em;
+    margin-top: 2em;
     border-bottom: 5px solid $blue;
 
     .post-header {
@@ -104,6 +105,7 @@
 
     .post-excerpt {
       text-align: center;
+      padding-bottom: 2em;
     }
   }
 

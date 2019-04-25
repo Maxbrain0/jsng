@@ -1,6 +1,6 @@
 {
   "name": "jsng-ghost-theme",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "blog theme for jsng",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
