@@ -39,7 +39,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.8.1",
     "@fortawesome/free-regular-svg-icons": "^5.8.1",
     "@fortawesome/free-solid-svg-icons": "^5.8.1",
-    "prismjs": "^1.16.0",
+    "prismjs": "^1.23.0",
     "reframe.js": "^2.2.5"
   },
   "watchreload": {
